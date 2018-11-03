@@ -1,12 +1,13 @@
 text = "qwer tyuio"
 a = len(text) # Определяем количество символов в строке
 i = 0
-zam = ''
-while i <= a-2:
-    k = text[i+1]
-    text.replace(text[i+1], text[i])
-    text.replace(text[i], k)
-    i = i+1
+    while i <= a-2:
+        k = text[i]
+        text = text.replace(text[i], text[i+1], 1)
+        print(text)
+        text = text.replace(text[i+1], k, 1)
+        print(text)
+        i = i+1
 
 print(text)
 
